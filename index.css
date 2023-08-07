@@ -24,3 +24,41 @@ footer {
 	/*下に固定*/
 	text-align: center;
 }
+
+a {
+	color: rgb(19, 157, 255);
+}
+
+button {
+	background: transparent;
+	background-color: white;
+	box-shadow: none;
+	/* border: none; */
+	border-color: #ddd;
+	border-radius: 3px;
+	outline: none;
+	cursor: pointer;
+}
+
+input {
+	/* width: 100%; */
+	/*親要素いっぱい広げる*/
+	padding: 4px 10px;
+	/*ボックスを大きくする*/
+	/* font-size: 16px; */
+	border-radius: 3px;
+	/*ボックス角の丸み*/
+	border: 2px solid #ddd;
+	/*枠線*/
+	box-sizing: border-box;
+	/*横幅の解釈をpadding, borderまでとする*/
+}
+
+input:focus {
+	border: 2px solid rgb(19, 157, 255);
+	z-index: 10;
+	outline: 0;
+	box-shadow: 0 0 5px 0 rgba(19, 157, 255, 1);
+	border: 2px solid #f1f1f1 !important;
+	outline: 0;
+}
