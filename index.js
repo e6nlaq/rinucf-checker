@@ -57,7 +57,7 @@ async function check() {
 
 
 
-	detail.innerHTML = "詳細情報<br>" +
+	detail.innerHTML = "詳細情報<br><br>" +
 		`作成者IPアドレス: <a href=${dat["CreatorInfo"]["MoreInformation"]}>${dat["CreatorInfo"]["IPAddress"]}</a><br>` +
 		`IPからわかる場所: ${dat["CreatorInfo"]["Location"]}<br>` +
 		`遷移先URL: <a href="${go_url}">${go_url}</a><br>` +
