@@ -64,3 +64,17 @@ async function check() {
 		`作成日: ${dat["CreatedDateTime"]}<br>` +
 		`使用回数: ${dat["UsedCount"]}`;
 }
+
+async function paste() {
+
+	let url = document.getElementById("url");
+	await navigator.clipboard.readText().then(
+		(clip) => {
+			url.value = clip;
+		}
+	);
+
+	// alert(navigator.clipboard.readText());
+
+	check();
+}
