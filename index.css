@@ -1,0 +1,26 @@
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	text-align: center;
+	background-color: #f1f1f1;
+}
+
+.red_text {
+	color: red;
+}
+
+.center_box {
+	text-align: center;
+}
+
+.center_box p {
+	display: inline-block;
+	text-align: left;
+}
+
+footer {
+	position: absolute;
+	/*←絶対位置*/
+	bottom: 0;
+	/*下に固定*/
+	text-align: center;
+}
