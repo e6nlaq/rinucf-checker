@@ -45,6 +45,16 @@ async function check() {
 
 	let go_url = "http://example.com/";
 
+	if (dat["status"] != "OK") {
+		load.textContent = "エラー";
+		if (dat["type"] == 404) {
+			detail.textContent = "URLが存在しません。もう一度お確かめの上、再試行してください。(404)";
+		} else {
+			detail.textContent = `申し訳ございません。予期せぬエラーが発生しました。(${dat["type"]})`;
+		}
+		return;
+	}
+
 	if (toku_regex.test(dat["LinkURL"])) {
 		load.textContent = "特定ツール有";
 		load.classList.add("red_text");
@@ -55,14 +65,16 @@ async function check() {
 		go_url = dat["LinkURL"];
 	}
 
-
+	const last_use_ip = dat["LastUsed"].substring(11);
 
 	detail.innerHTML = "詳細情報<br><br>" +
 		`作成者IPアドレス: <a href=${dat["CreatorInfo"]["MoreInformation"]}>${dat["CreatorInfo"]["IPAddress"]}</a><br>` +
-		`IPからわかる場所: ${dat["CreatorInfo"]["Location"]}<br>` +
+		`作成者タイムゾーン: ${dat["CreatorInfo"]["TimeZone"]}<br>` +
+		`IPからわかる場所: ${dat["CreatorInfo"]["Location"]}<br><br>` +
 		`遷移先URL: <a href="${go_url}">${decodeURIComponent(go_url)}</a><br>` +
 		`作成日: ${dat["CreatedDateTime"]}<br>` +
-		`使用回数: ${dat["UsedCount"]}`;
+		`使用回数: ${dat["UsedCount"]}<br>` +
+		`最後に使用したユーザーのIPアドレス: <a href="https://ipinfo.io/${last_use_ip}">${last_use_ip}</a>`;
 }
 
 async function paste() {
