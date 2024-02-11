@@ -1,9 +1,11 @@
 
-# rinu.cf Checker
+# rinu.jp Checker
 
 <img src="./img/desc.png" height=300px></img>
 
-rinu.cfに特定ツールが仕込まれているかチェックするサイト
+rinu.jpに特定ツールが仕込まれているかチェックするサイト
+
+旧式のrinu.cfにも対応しています!
 
 ## 使い方
 

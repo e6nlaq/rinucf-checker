@@ -29,11 +29,11 @@ async function check() {
 	let url = document.getElementById("url").value;
 
 	// なんと汚い正規表現なのでしょう
-	const rinu_regex = /^https?:\/\/rinu.cf\/[\w/:%#\$&\?\(\)~\.=\+\-]+$/;
-	const toku_regex = /^https?:\/\/tokutei.cf\/\?url=[\w/:%#\$&\?\(\)~\.=\+\-]+$/;
+	const rinu_regex = /^https?:\/\/rinu\.(cf|jp)\/[\w/:%#\$&\?\(\)~\.=\+\-]+$/;
+	const toku_regex = /^https?:\/\/(tokutei\.cf|tokutei\.end2end\.tech)\/\?url=[\w/:%#\$&\?\(\)~\.=\+\-]+$/;
 
 	if (!rinu_regex.test(url)) {
-		load.textContent = "rinu.cfのURLを入力してください。";
+		load.textContent = "rinu.cf or rinu.jpのURLを入力してください。";
 		return;
 	}
 

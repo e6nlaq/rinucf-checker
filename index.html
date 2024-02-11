@@ -1,53 +1,69 @@
 ﻿<!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rinu.jp チェッカー</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <script src="index.js"></script>
+    <meta
+      name="google-site-verification"
+      content="HrA25KTjH5-VVYwJlM4yAhsYvljw7LEFqgFg_PwBBOQ"
+    />
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>rinu.cf チェッカー</title>
-	<link rel="stylesheet" href="index.css">
-	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-	<script src="index.js"></script>
-	<meta name="google-site-verification" content="HrA25KTjH5-VVYwJlM4yAhsYvljw7LEFqgFg_PwBBOQ" />
+    <!-- meta tag -->
+    <meta name="author" content="e6nlaq" />
+    <meta
+      name="description"
+      content="rinu.jp(旧rinu.cf)の特定ツール判定ツール"
+    />
+    <meta
+      name="keywords"
+      content="rinu.cf,特定,判定,特定ツール,位置情報,判定ツール,チェッカー,チェック"
+    />
 
-	<!-- meta tag -->
-	<meta name="author" content="e6nlaq">
-	<meta name="description" content="rinu.cfの特定ツール判定ツール">
-	<meta name="keywords" content="rinu.cf,特定,判定,特定ツール,位置情報,判定ツール,チェッカー,チェック">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:domain" content="e6nlaq.github.io" />
+    <meta name="twitter:title" content="rinu.jp チェッカー" />
+    <meta name="twitter:description" content="rinu.jpの特定ツール判定ツール" />
+    <meta
+      name="twitter:image"
+      content="https://e6nlaq.github.io/rinucf-checker/img/favicon.png"
+    />
+  </head>
 
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:domain" content="e6nlaq.github.io">
-	<meta name="twitter:title" content="rinu.cf チェッカー">
-	<meta name="twitter:description" content="rinu.cfの特定ツール判定ツール">
-	<meta name="twitter:image" content="https://e6nlaq.github.io/rinucf-checker/img/favicon.png">
-</head>
+  <body>
+    <h1>rinu.jp(旧rinu.cf) チェッカー</h1>
+    <a
+      href="https://github.com/e6nlaq/rinucf-checker#%E4%BD%BF%E3%81%84%E6%96%B9"
+      >使い方</a
+    >
+    <br />
 
-<body>
-	<h1>rinu.cf チェッカー</h1>
-	<a href="https://github.com/e6nlaq/rinucf-checker#%E4%BD%BF%E3%81%84%E6%96%B9">使い方</a>
-	<br>
+    <input type="text" name="" id="url" />
+    <button onclick="check();">チェック</button>
+    <button onclick="paste();">貼り付けてチェック</button>
 
-	<input type="text" name="" id="url">
-	<button onclick="check();">チェック</button>
-	<button onclick="paste();">貼り付けてチェック</button>
+    <!-- :thinking: -->
+    <br />
+    <br />
 
-	<!-- :thinking: -->
-	<br>
-	<br>
+    <h2 id="loading"></h2>
 
-	<h2 id="loading"></h2>
+    <div class="center_box">
+      <p id="detail" class="detail"></p>
+      <br />
+      <p class="ip_warn">
+        ※郵便番号・場所はIPからわかる情報であり、ほとんどの場合正確ではありません。参考程度にご利用ください。
+      </p>
+    </div>
 
-	<div class="center_box">
-		<p id="detail" class="detail"></p>
-		<br>
-		<p class="ip_warn">※郵便番号・場所はIPからわかる情報であり、ほとんどの場合正確ではありません。参考程度にご利用ください。</p>
-	</div>
-
-	<footer>
-		<p>(C) 2023 <a href="https://github.com/e6nlaq">e6nlaq</a> - <a
-				href="http://github.com/e6nlaq/rinucf-checker">リポジトリ</a></p>
-	</footer>
-
-</body>
-
+    <footer>
+      <p>
+        (C) 2024 <a href="https://github.com/e6nlaq">e6nlaq</a> -
+        <a href="http://github.com/e6nlaq/rinucf-checker">リポジトリ</a>
+      </p>
+    </footer>
+  </body>
 </html>
