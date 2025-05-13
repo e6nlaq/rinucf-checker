@@ -43,7 +43,7 @@ async function check() {
 	else
 		url_code = url.substring(15);
 
-	let dat = await (await fetch(`https://api.activetk.jp/urlmin/get?code=${url_code}`)).json();
+	let dat = await (await fetch(`https://api.activetk.jp/urlmin/get&code=${url_code}`)).json();
 
 	console.log(`Send Code:${url_code}`);
 	console.log(dat);
