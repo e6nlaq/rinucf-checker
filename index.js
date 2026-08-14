@@ -26,7 +26,7 @@ async function check() {
 
 	load.classList.remove("red_text");
 
-	let url = document.getElementById("url").value;
+	let url = document.getElementById("url").value.trim();
 
 	// なんと汚い正規表現なのでしょう
 	const rinu_regex = /^https?:\/\/rinu\.(cf|jp)\/[\w/:%#\$&\?\(\)~\.=\+\-]+$/;

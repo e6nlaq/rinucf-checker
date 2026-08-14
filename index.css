@@ -64,5 +64,6 @@ input:focus {
 }
 
 .ip_warn {
-	color: #dadada;
+	color: #8d8d8d;
+	font-size: smaller;
 }
